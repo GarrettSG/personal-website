@@ -84,6 +84,36 @@ const products: Product[] = [
 
 const demos = [
   {
+    name: 'Work Experience',
+    items: [
+      {
+        slug: 'layouts',
+        name: 'Full Stack Internship',
+        description: 'IT Full Stack Development Intenship at Meritage Homes - Scottsdale, Arizona',
+      },
+      {
+        slug: 'route-groups',
+        name: 'Website Development',
+        description: 'Frontend Developer for Theta Tau, Delta Gamma Chapter - Tempe, Arizona',
+      }
+    ],
+  },
+  {
+    name: 'Education',
+    items: [
+      {
+        slug: 'layouts',
+        name: 'Arizona State University',
+        description: 'Bachelor\'s of Science in Computer Science with a minor in Data Science',
+      },
+      {
+        slug: 'route-groups',
+        name: 'Courses',
+        description: 'Cumulative GPA: 4.00',
+      }
+    ],
+  },
+  {
     name: 'Layouts',
     items: [
       {
