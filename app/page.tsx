@@ -7,7 +7,7 @@ export default function Page() {
   const demos = db.demo.findMany();
   return (
     <Boundary
-      label="Examples"
+      label="About Me"
       animateRerendering={false}
       kind="solid"
       className="flex flex-col gap-9"
