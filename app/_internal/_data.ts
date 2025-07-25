@@ -35,14 +35,10 @@ export type Demo = {
 export type DemoCategory = { name: string; items: Demo[] };
 
 const sections: Section[] = [
-  { id: '1', name: 'Clothing', slug: 'clothing', categories: ['1', '2', '3'] },
-  {
-    id: '2',
-    name: 'Electronics',
-    slug: 'electronics',
-    categories: ['4', '5', '6'],
-  },
-  { id: '3', name: 'Sports', slug: 'sports', categories: ['7', '8', '9'] },
+  { id: '1', name: 'Computer Science', slug: 'clothing', categories: ['1', '2', '3'] },
+  { id: '2', name: 'Math', slug: 'electronics', categories: ['4', '5', '6'] },
+  { id: '3', name: 'Data Science', slug: 'sports', categories: ['7', '8', '9'] },
+  { id: '4', name: 'Other', slug: 'other', categories: ['7', '8', '9'] },
 ];
 
 const categories: Category[] = [
@@ -87,14 +83,14 @@ const demos = [
     name: 'Work Experience',
     items: [
       {
-        slug: 'layouts',
-        name: 'Full Stack Internship',
-        description: 'IT Full Stack Development Intenship at Meritage Homes - Scottsdale, Arizona',
+        slug: 'meritage-homes',
+        name: 'Full-Stack Development Intern',
+        description: 'IT Full-Stack Development Intenship at Meritage Homes - Scottsdale, Arizona',
       },
       {
         slug: 'route-groups',
-        name: 'Website Development',
-        description: 'Frontend Developer for Theta Tau, Delta Gamma Chapter - Tempe, Arizona',
+        name: 'Teaching Assistant - Data Structures and Algorithms',
+        description: 'Undergraduate Teaching Assistant for Data Structures and Algorithms at ASU - Tempe, Arizona',
       }
     ],
   },
@@ -110,6 +106,16 @@ const demos = [
         slug: 'route-groups',
         name: 'Courses',
         description: 'Cumulative GPA: 4.00',
+      }
+    ],
+  },
+  {
+    name: 'Volunteering',
+    items: [
+      {
+        slug: 'layouts',
+        name: 'Website Development',
+        description: 'Lead the front-end development of the Theta Tau - Delta Gamme website',
       }
     ],
   },

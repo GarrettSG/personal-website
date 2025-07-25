@@ -26,6 +26,7 @@ export const Boundary = ({
 }) => {
   return (
     <div
+      style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}
       className={clsx('relative border', {
         'border-dashed': kind === 'dashed',
         'border-gray-800': color === 'gray',
