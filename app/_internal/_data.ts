@@ -67,9 +67,9 @@ const categories: Category[] = [
 ];
 
 const products: Product[] = [
-  { id: '1', courseName: 'Data Structures and Algorithms', courseId: 'top.png', grade: '', category: '1' },
-  { id: '2', courseName: 'Shorts', courseId: 'shorts.png', grade: '', category: '2' },
-  { id: '3', courseName: 'Shoes', courseId: 'shoes.png', grade: '', category: '3' },
+  { id: '1', courseName: 'Data Structures and Algorithms', courseId: 'CSE310', grade: 'A+', category: '1' },
+  { id: '2', courseName: 'Intro to Programming Languages', courseId: 'CSE240', grade: 'A', category: '2' },
+  { id: '3', courseName: 'Computer Org/Assembly Programming', courseId: 'CSE230', grade: 'A', category: '3' },
   { id: '4', courseName: 'Phone', courseId: 'phone.png', grade: '', category: '4' },
   { id: '5', courseName: 'Laptop', courseId: 'laptop.png', grade: '', category: '5' },
   { id: '6', courseName: 'Tablet', courseId: 'tablet.png', grade: '', category: '6' },
@@ -89,7 +89,7 @@ const demos = [
         description: 'IT Full-Stack Development Intenship at Meritage Homes - Scottsdale, Arizona',
       },
       {
-        slug: 'route-groups',
+        slug: 'teaching-assistant',
         name: 'Teaching Assistant - Data Structures and Algorithms',
         description: 'Undergraduate Teaching Assistant for Data Structures and Algorithms at ASU - Tempe, Arizona',
       }
@@ -99,7 +99,7 @@ const demos = [
     name: 'Education',
     items: [
       {
-        slug: 'layouts',
+        slug: 'arizona-state',
         name: 'Arizona State University',
         description: 'Bachelor\'s of Science in Computer Science with a minor in Data Science',
       },
@@ -114,103 +114,12 @@ const demos = [
     name: 'Volunteering',
     items: [
       {
-        slug: 'layouts',
+        slug: 'theta-tau',
         name: 'Website Development',
         description: 'Lead the front-end development of the Theta Tau - Delta Gamme website',
       }
     ],
-  },
-  {
-    name: 'Layouts',
-    items: [
-      {
-        slug: 'layouts',
-        name: 'Nested Layouts',
-        description: 'Create UI that is shared across routes',
-      },
-      {
-        slug: 'route-groups',
-        name: 'Route Groups',
-        description: 'Organize routes without affecting URL paths',
-      },
-      {
-        slug: 'parallel-routes',
-        name: 'Parallel Routes',
-        description: 'Render multiple pages in the same layout',
-      },
-    ],
-  },
-  {
-    name: 'File Conventions',
-    items: [
-      {
-        slug: 'loading',
-        name: 'Loading',
-        description:
-          'Create meaningful Loading UI for specific parts of an app',
-      },
-      {
-        slug: 'error',
-        name: 'Error',
-        description: 'Create Error UI for specific parts of an app',
-      },
-      {
-        slug: 'not-found',
-        name: 'Not Found',
-        description: 'Create Not Found UI for specific parts of an app',
-      },
-    ],
-  },
-  {
-    name: 'Caching',
-    items: [
-      {
-        slug: 'cached-routes',
-        name: 'Cached Route Segments',
-        nav_title: 'Cached Routes',
-        description: 'Cache the rendered output of a route segment',
-      },
-      {
-        slug: 'cached-components',
-        name: 'Cached React Server Components',
-        nav_title: 'Cached Components',
-        description:
-          'Cache the rendered output of an individual React Server Component',
-      },
-      {
-        slug: 'cached-functions',
-        name: 'Cached Functions',
-        description: 'Cache the computed result of a regular function',
-      },
-    ],
-  },
-  {
-    name: 'APIs',
-    items: [
-      {
-        slug: 'use-link-status',
-        name: 'useLinkStatus',
-        description: 'Create inline visual feedback for link interactions',
-      },
-    ],
-  },
-  {
-    name: 'Misc',
-    items: [
-      {
-        slug: 'view-transitions',
-        name: 'View Transitions',
-        description:
-          'Use animations to help users understand the relationship between the two views',
-      },
-      {
-        slug: 'context',
-        name: 'Client Context',
-        description:
-          'Pass context between Client Components that cross Server/Client Component boundary',
-      },
-    ],
-  },
+  }
 ] as const satisfies DemoCategory[];
 
 export type DemoSlug = (typeof demos)[number]['items'][number]['slug'];
