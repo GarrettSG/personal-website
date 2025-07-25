@@ -18,7 +18,7 @@ export default async function Layout({
     notFound();
   }
 
-  const demo = db.demo.find({ where: { slug: 'layouts' } });
+  const demo = db.demo.find({ where: { slug: 'courses' } });
   const categories = db.category.findMany({ where: { section: section?.id } });
 
   return (
