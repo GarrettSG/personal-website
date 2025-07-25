@@ -54,8 +54,8 @@ export default async function Page() {
                   <div className="overflow-hidden rounded-md bg-gray-900/50 p-8 group-hover:bg-gray-900">
                     <Image
                       className="brightness-150"
-                      src={`/shop/${product.image}`}
-                      alt={product.name}
+                      src={`/shop/${product.courseId}`}
+                      alt={product.courseName}
                       quality={90}
                       width={400}
                       height={400}

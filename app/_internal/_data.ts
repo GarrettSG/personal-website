@@ -5,8 +5,9 @@
 
 export type Product = {
   id: string;
-  name: string;
-  image: string;
+  courseName: string;
+  courseId: string;
+  grade: string;
   category: string;
 };
 
@@ -36,8 +37,8 @@ export type DemoCategory = { name: string; items: Demo[] };
 
 const sections: Section[] = [
   { id: '1', name: 'Computer Science', slug: 'clothing', categories: ['1', '2', '3'] },
-  { id: '2', name: 'Math', slug: 'electronics', categories: ['4', '5', '6'] },
-  { id: '3', name: 'Data Science', slug: 'sports', categories: ['7', '8', '9'] },
+  { id: '2', name: 'Data Science', slug: 'electronics', categories: ['4', '5', '6'] },
+  { id: '3', name: 'Math', slug: 'sports', categories: ['7', '8', '9'] },
   { id: '4', name: 'Other', slug: 'other', categories: ['7', '8', '9'] },
 ];
 
@@ -66,17 +67,17 @@ const categories: Category[] = [
 ];
 
 const products: Product[] = [
-  { id: '1', name: 'Top', image: 'top.png', category: '1' },
-  { id: '2', name: 'Shorts', image: 'shorts.png', category: '2' },
-  { id: '3', name: 'Shoes', image: 'shoes.png', category: '3' },
-
-  { id: '4', name: 'Phone', image: 'phone.png', category: '4' },
-  { id: '5', name: 'Laptop', image: 'laptop.png', category: '5' },
-  { id: '6', name: 'Tablet', image: 'tablet.png', category: '6' },
-  { id: '7', name: 'Basketball', image: 'balls.png', category: '7' },
-  { id: '8', name: 'Weights', image: 'weights.png', category: '8' },
-  { id: '9', name: 'Gloves', image: 'gloves.png', category: '9' },
+  { id: '1', courseName: 'Data Structures and Algorithms', courseId: 'top.png', grade: '', category: '1' },
+  { id: '2', courseName: 'Shorts', courseId: 'shorts.png', grade: '', category: '2' },
+  { id: '3', courseName: 'Shoes', courseId: 'shoes.png', grade: '', category: '3' },
+  { id: '4', courseName: 'Phone', courseId: 'phone.png', grade: '', category: '4' },
+  { id: '5', courseName: 'Laptop', courseId: 'laptop.png', grade: '', category: '5' },
+  { id: '6', courseName: 'Tablet', courseId: 'tablet.png', grade: '', category: '6' },
+  { id: '7', courseName: 'Basketball', courseId: 'balls.png', grade: '', category: '7' },
+  { id: '8', courseName: 'Weights', courseId: 'weights.png', grade: '', category: '8' },
+  { id: '9', courseName: 'Gloves', courseId: 'gloves.png', grade: '', category: '9' },
 ];
+
 
 const demos = [
   {

@@ -31,9 +31,9 @@ export function ProductCard<E extends ElementType = 'div'>({
   return (
     <Component className="group flex flex-col gap-2.5" {...rest}>
       <div className="overflow-hidden rounded-md bg-gray-900/50 p-4 group-hover:bg-gray-900 text-white space-y-4">
-        <div>Course Name: {product.name}</div>
-        <div>ASU Course Number: {product.name}</div>
-        <div>Grade: {product.name}</div>
+        <div>{product.courseName}</div>
+        <div>{product.courseId}</div>
+        <div>{product.grade}</div>
       </div>
     </Component>
   );

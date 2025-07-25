@@ -90,7 +90,7 @@ export default async function Page({
                 'transition-to-detail': 'animate-morph',
               }}
             >
-              <ProductImage src={product.image} alt={product.name} />
+              <ProductImage src={product.courseId} alt={product.courseName} />
             </SharedTransition>
 
             <ProductDetails id={product.id} />
