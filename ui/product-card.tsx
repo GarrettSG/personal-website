@@ -30,24 +30,16 @@ export function ProductCard<E extends ElementType = 'div'>({
   const Component = as || 'div';
   return (
     <Component className="group flex flex-col gap-2.5" {...rest}>
-      <div className="overflow-hidden rounded-md bg-gray-900/50 p-8 group-hover:bg-gray-900">
-        <Image
-          className={clsx(animateEnter && 'transition-enter')}
-          src={`/shop/${product.image}`}
-          alt={product.name}
-          quality={90}
-          width={400}
-          height={400}
-        />
-      </div>
-
-      <div className="flex flex-col gap-2">
-        <div className="h-2 w-4/5 rounded-full bg-gray-800" />
-        <div className="h-2 w-1/3 rounded-full bg-gray-800" />
+      <div className="overflow-hidden rounded-md bg-gray-900/50 p-4 group-hover:bg-gray-900 text-white space-y-4">
+        <div>Course Name: {product.name}</div>
+        <div>ASU Course Number: {product.name}</div>
+        <div>Grade: {product.name}</div>
       </div>
     </Component>
   );
 }
+
+
 
 export function ProductCardSkeleton() {
   return (

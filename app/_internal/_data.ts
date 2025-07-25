@@ -103,7 +103,7 @@ const demos = [
         description: 'Bachelor\'s of Science in Computer Science with a minor in Data Science',
       },
       {
-        slug: 'route-groups',
+        slug: 'courses',
         name: 'Courses',
         description: 'Cumulative GPA: 4.00',
       }
