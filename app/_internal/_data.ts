@@ -5,8 +5,9 @@
 
 export type Product = {
   id: string;
-  name: string;
-  image: string;
+  courseName: string;
+  courseId: string;
+  grade: string;
   category: string;
 };
 
@@ -35,14 +36,10 @@ export type Demo = {
 export type DemoCategory = { name: string; items: Demo[] };
 
 const sections: Section[] = [
-  { id: '1', name: 'Clothing', slug: 'clothing', categories: ['1', '2', '3'] },
-  {
-    id: '2',
-    name: 'Electronics',
-    slug: 'electronics',
-    categories: ['4', '5', '6'],
-  },
-  { id: '3', name: 'Sports', slug: 'sports', categories: ['7', '8', '9'] },
+  { id: '1', name: 'Computer Science', slug: 'clothing', categories: ['1', '2', '3'] },
+  { id: '2', name: 'Data Science', slug: 'electronics', categories: ['4', '5', '6'] },
+  { id: '3', name: 'Math', slug: 'sports', categories: ['7', '8', '9'] },
+  { id: '4', name: 'Other', slug: 'other', categories: ['7', '8', '9'] },
 ];
 
 const categories: Category[] = [
@@ -70,31 +67,46 @@ const categories: Category[] = [
 ];
 
 const products: Product[] = [
-  { id: '1', name: 'Top', image: 'top.png', category: '1' },
-  { id: '2', name: 'Shorts', image: 'shorts.png', category: '2' },
-  { id: '3', name: 'Shoes', image: 'shoes.png', category: '3' },
-
-  { id: '4', name: 'Phone', image: 'phone.png', category: '4' },
-  { id: '5', name: 'Laptop', image: 'laptop.png', category: '5' },
-  { id: '6', name: 'Tablet', image: 'tablet.png', category: '6' },
-  { id: '7', name: 'Basketball', image: 'balls.png', category: '7' },
-  { id: '8', name: 'Weights', image: 'weights.png', category: '8' },
-  { id: '9', name: 'Gloves', image: 'gloves.png', category: '9' },
+  { id: '1', courseName: 'Data Structures and Algorithms', courseId: 'CSE310', grade: 'A+', category: '1' },
+  { id: '2', courseName: 'Intro to Programming Languages', courseId: 'CSE240', grade: 'A', category: '2' },
+  { id: '3', courseName: 'Computer Org/Assembly Programming', courseId: 'CSE230', grade: 'A', category: '3' },
+  { id: '4', courseName: 'Phone', courseId: 'phone.png', grade: '', category: '4' },
+  { id: '5', courseName: 'Laptop', courseId: 'laptop.png', grade: '', category: '5' },
+  { id: '6', courseName: 'Tablet', courseId: 'tablet.png', grade: '', category: '6' },
+  { id: '7', courseName: 'Basketball', courseId: 'balls.png', grade: '', category: '7' },
+  { id: '8', courseName: 'Weights', courseId: 'weights.png', grade: '', category: '8' },
+  { id: '9', courseName: 'Gloves', courseId: 'gloves.png', grade: '', category: '9' },
 ];
 
+
 const demos = [
+  {
+    name: 'Personal Projects',
+    items: [
+      {
+        slug: 'project-cars',
+        name: 'Deep Learning Cars',
+        description: 'Unity project using evolutionary neural networks to train cars to drive',
+      },
+      {
+        slug: 'project-sportbet',
+        name: 'OddsOptimizer',
+        description: 'Python application that gets real-time betting odds and identifies the most favorable line',
+      }
+    ],
+  },
   {
     name: 'Work Experience',
     items: [
       {
-        slug: 'layouts',
-        name: 'Full Stack Internship',
-        description: 'IT Full Stack Development Intenship at Meritage Homes - Scottsdale, Arizona',
+        slug: 'meritage-homes',
+        name: 'Full-Stack Development Intern',
+        description: 'IT Full-Stack Development Intenship at Meritage Homes - Scottsdale, Arizona',
       },
       {
-        slug: 'route-groups',
-        name: 'Website Development',
-        description: 'Frontend Developer for Theta Tau, Delta Gamma Chapter - Tempe, Arizona',
+        slug: 'teaching-assistant',
+        name: 'Teaching Assistant - Data Structures and Algorithms',
+        description: 'Undergraduate Teaching Assistant for Data Structures and Algorithms at ASU - Tempe, Arizona',
       }
     ],
   },
@@ -102,108 +114,27 @@ const demos = [
     name: 'Education',
     items: [
       {
-        slug: 'layouts',
+        slug: 'arizona-state',
         name: 'Arizona State University',
         description: 'Bachelor\'s of Science in Computer Science with a minor in Data Science',
       },
       {
-        slug: 'route-groups',
+        slug: 'courses',
         name: 'Courses',
         description: 'Cumulative GPA: 4.00',
       }
     ],
   },
   {
-    name: 'Layouts',
+    name: 'Volunteering',
     items: [
       {
-        slug: 'layouts',
-        name: 'Nested Layouts',
-        description: 'Create UI that is shared across routes',
-      },
-      {
-        slug: 'route-groups',
-        name: 'Route Groups',
-        description: 'Organize routes without affecting URL paths',
-      },
-      {
-        slug: 'parallel-routes',
-        name: 'Parallel Routes',
-        description: 'Render multiple pages in the same layout',
-      },
+        slug: 'theta-tau',
+        name: 'Website Development',
+        description: 'Lead the front-end development of the Theta Tau - Delta Gamme website',
+      }
     ],
-  },
-  {
-    name: 'File Conventions',
-    items: [
-      {
-        slug: 'loading',
-        name: 'Loading',
-        description:
-          'Create meaningful Loading UI for specific parts of an app',
-      },
-      {
-        slug: 'error',
-        name: 'Error',
-        description: 'Create Error UI for specific parts of an app',
-      },
-      {
-        slug: 'not-found',
-        name: 'Not Found',
-        description: 'Create Not Found UI for specific parts of an app',
-      },
-    ],
-  },
-  {
-    name: 'Caching',
-    items: [
-      {
-        slug: 'cached-routes',
-        name: 'Cached Route Segments',
-        nav_title: 'Cached Routes',
-        description: 'Cache the rendered output of a route segment',
-      },
-      {
-        slug: 'cached-components',
-        name: 'Cached React Server Components',
-        nav_title: 'Cached Components',
-        description:
-          'Cache the rendered output of an individual React Server Component',
-      },
-      {
-        slug: 'cached-functions',
-        name: 'Cached Functions',
-        description: 'Cache the computed result of a regular function',
-      },
-    ],
-  },
-  {
-    name: 'APIs',
-    items: [
-      {
-        slug: 'use-link-status',
-        name: 'useLinkStatus',
-        description: 'Create inline visual feedback for link interactions',
-      },
-    ],
-  },
-  {
-    name: 'Misc',
-    items: [
-      {
-        slug: 'view-transitions',
-        name: 'View Transitions',
-        description:
-          'Use animations to help users understand the relationship between the two views',
-      },
-      {
-        slug: 'context',
-        name: 'Client Context',
-        description:
-          'Pass context between Client Components that cross Server/Client Component boundary',
-      },
-    ],
-  },
+  }
 ] as const satisfies DemoCategory[];
 
 export type DemoSlug = (typeof demos)[number]['items'][number]['slug'];

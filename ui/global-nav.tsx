@@ -15,7 +15,7 @@ export function GlobalNav({ items }: { items: DemoCategory[] }) {
 
   return (
     <>
-      <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
+      <div className="flex h-14 items-center px-4 py-4 lg:h-auto bg-black">
         <Link
           href="/"
           className="group flex w-full items-center gap-x-2.5"

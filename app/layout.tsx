@@ -38,15 +38,25 @@ export default function RootLayout({
       <body
         className={`overflow-y-scroll bg-gray-950 font-sans ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-r lg:border-b-0 lg:border-gray-800">
-          <GlobalNav items={demos} />
-        </div>
+        <div
+          className="min-h-screen overflow-y-scroll font-sans antialiased"
+          style={{
+            backgroundImage: 'url("/images/homepageBackground.jpg")',
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black/50 lg:bottom-0 lg:z-auto lg:w-72 lg:border-r lg:border-b-0 lg:border-gray-800">
+            <GlobalNav items={demos} />
+          </div>
 
-        <div className="lg:pl-72">
-          <div className="mx-auto mt-12 mb-24 max-w-4xl -space-y-[1px] lg:px-8 lg:py-8">
-            {children}
+          <div className="lg:pl-72">
+            <div className="mx-auto mt-12 mb-24 max-w-4xl -space-y-[1px] lg:px-8 lg:py-8">
+              {children}
 
-            <Byline />
+              <Byline />
+            </div>
           </div>
         </div>
       </body>
