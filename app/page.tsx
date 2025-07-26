@@ -1,6 +1,7 @@
 import db from '#/lib/db';
 import { Boundary } from '#/ui/boundary';
 import { LinkStatus } from '#/ui/link-status';
+import GlowingCard from '#/ui/glowingcard';
 import Link from 'next/link';
 
 export default function Page() {
@@ -12,6 +13,7 @@ export default function Page() {
       kind="solid"
       className="flex flex-col gap-9"
     >
+      <GlowingCard></GlowingCard>
       {demos.map((section) => {
         return (
           <div key={section.name} className="flex flex-col gap-3">
