@@ -41,6 +41,7 @@ export default async function Layout({
         label="Position" kind="solid" animateRerendering={false} className="flex flex-col gap-9"
       >
         <Mdx source={aboutPosition} />
+
       </Boundary>
     </>
   );
