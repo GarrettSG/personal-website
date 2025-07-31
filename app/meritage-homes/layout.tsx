@@ -7,7 +7,8 @@ import { ClickCounter } from '#/ui/click-counter';
 import { Tabs } from '#/ui/tabs';
 import { type Metadata } from 'next';
 import { Mdx } from '#/ui/codehike';
-import readme from './readme.mdx';
+import aboutMeritage from './aboutMeritage.mdx';
+import aboutPosition from './aboutPosition.mdx';
 
 export async function generateMetadata(): Promise<Metadata> {
   const demo = db.demo.find({ where: { slug: 'meritage-homes' } });
@@ -28,30 +29,18 @@ export default async function Layout({
 
   return (
     <>
-      <Boundary label="Demo" kind="solid" animateRerendering={false}>
-        <Mdx source={readme} collapsed={true} />
+      <Boundary label="About Meritage" kind="solid" animateRerendering={false}>
+        <img
+          src="images/MeritageHomes.png"
+          alt="ASU Fulton Engineering logo"
+          style={{ maxHeight: '150px', width: 'auto', padding: '5px' }}
+        />
+        <Mdx source={aboutMeritage} collapsed={true} />
       </Boundary>
       <Boundary
-        label="layout.tsx"
-        kind="solid"
-        animateRerendering={false}
-        className="flex flex-col gap-9"
+        label="Position" kind="solid" animateRerendering={false} className="flex flex-col gap-9"
       >
-        <div className="flex justify-between">
-          <Tabs
-            basePath={`/${demo.slug}`}
-            items={[
-              { text: 'Home' },
-              ...sections.map((x) => ({ text: x.name, slug: x.slug })),
-            ]}
-          />
-
-          <div className="self-start">
-            <ClickCounter />
-          </div>
-        </div>
-
-        {children}
+        <Mdx source={aboutPosition} />
       </Boundary>
     </>
   );
