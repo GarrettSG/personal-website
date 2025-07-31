@@ -13,7 +13,7 @@ export function Prose({
   collapsed?: boolean;
 }) {
   const isCollapsible = typeof collapsed === 'boolean';
-  const [isCollapsed, setIsCollapsed] = React.useState(collapsed);
+  const [isCollapsed, setIsCollapsed] = React.useState(collapsed ?? false);
   const contentId = React.useId();
 
   return (
@@ -23,11 +23,13 @@ export function Prose({
         role={isCollapsible ? 'region' : undefined}
         aria-hidden={isCollapsible && isCollapsed}
         aria-expanded={isCollapsible && !isCollapsed}
-        className={clsx({
-          'max-h-[5lh] overflow-hidden': isCollapsible && isCollapsed,
-          '[mask-image:linear-gradient(to_bottom,black_60%,transparent_100%)]':
-            isCollapsed,
-        })}
+        className={clsx(
+          'transition-all duration-300 ease-in-out',
+          {
+            'h-0 overflow-hidden opacity-0 pointer-events-none': isCollapsible && isCollapsed,
+            'opacity-100 h-auto': isCollapsible && !isCollapsed,
+          }
+        )}
       >
         {children}
       </div>

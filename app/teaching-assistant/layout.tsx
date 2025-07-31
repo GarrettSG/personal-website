@@ -7,7 +7,7 @@ import { ClickCounter } from '#/ui/click-counter';
 import { Tabs } from '#/ui/tabs';
 import { type Metadata } from 'next';
 import { Mdx } from '#/ui/codehike';
-import readme from './readme.mdx';
+import readme from './aboutTA.mdx';
 
 export async function generateMetadata(): Promise<Metadata> {
   const demo = db.demo.find({ where: { slug: 'teaching-assistant' } });
@@ -29,6 +29,11 @@ export default async function Layout({
   return (
     <>
       <Boundary label="Demo" kind="solid" animateRerendering={false}>
+        <img
+          src="images/asu_fultonengineering.png"
+          alt="ASU Fulton Engineering logo"
+          style={{ maxHeight: '150px', width: 'auto', padding: '5px' }}
+        />
         <Mdx source={readme} collapsed={true} />
       </Boundary>
       <Boundary

@@ -14,18 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: { default: 'Next.js Playground', template: '%s | Next.js Playground' },
-  metadataBase: new URL('https://app-router.vercel.app'),
-  description:
-    'A playground to explore Next.js features such as nested layouts, instant loading states, streaming, and component level data fetching.',
-  openGraph: {
-    title: 'Next.js Playground',
-    description:
-      'A playground to explore Next.js features such as nested layouts, instant loading states, streaming, and component level data fetching.',
-    images: [`/api/og?title=Next.js Playground`],
+  title: {
+    default: 'Garrett Gibson - Personal Site',
+    template: '%s | Garrett Gibson',
   },
-  twitter: { card: 'summary_large_image' },
+  metadataBase: new URL('https://garrettgibson.dev'),
+  description: 'Portfolio site for Garrett Gibson – full-stack developer, software engineer, and technology enthusiast.',
+  openGraph: {
+    title: 'Garrett Gibson',
+    description: 'Explore the personal site and projects of Garrett Gibson, a full-stack developer focused on creating impactful software.',
+    url: 'https://garrettgibson.dev',
+    siteName: 'Garrett Gibson',
+    type: 'website',
+  },
 };
+
 
 export default function RootLayout({
   children,
