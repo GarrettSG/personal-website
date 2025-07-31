@@ -5,7 +5,7 @@ import { Boundary } from '#/ui/boundary';
 import { ProductCard } from '#/ui/product-card';
 
 export default async function Page() {
-  const products = db.product.findMany({ limit: 9 });
+  const products = db.product.findMany();
 
   return (
     <Boundary label="page.tsx">

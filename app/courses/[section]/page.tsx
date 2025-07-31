@@ -27,7 +27,7 @@ export default async function Page({
     <Boundary label="[section]/page.tsx">
       <div className="flex flex-col gap-4">
         <h1 className="text-xl font-semibold text-gray-300">
-          All{' '}
+          {section.name}{' '}
           <span className="font-mono tracking-tighter text-gray-600">
             ({products.length})
           </span>
