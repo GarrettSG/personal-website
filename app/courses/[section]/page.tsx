@@ -24,7 +24,7 @@ export default async function Page({
   const products = db.product.findMany({ where: { section: section.id } });
 
   return (
-    <Boundary label="[section]/page.tsx">
+    <Boundary animateRerendering={false}>
       <div className="flex flex-col gap-4">
         <h1 className="text-xl font-semibold text-gray-300">
           {section.name}{' '}

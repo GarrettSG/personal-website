@@ -3,7 +3,6 @@
 import React from 'react';
 import db from '#/lib/db';
 import { Boundary } from '#/ui/boundary';
-import { ClickCounter } from '#/ui/click-counter';
 import { Tabs } from '#/ui/tabs';
 import { type Metadata } from 'next';
 import { Mdx } from '#/ui/codehike';
@@ -29,13 +28,9 @@ export default async function Layout({
   return (
     <>
       <Boundary label="Courses at Arizona State University" kind="solid" animateRerendering={false}>
-        <Mdx source={readme} collapsed={true} />
+        <div>GPA: 4.00</div>
       </Boundary>
-      <Boundary
-        kind="solid"
-        animateRerendering={false}
-        className="flex flex-col gap-9"
-      >
+      <Boundary kind="solid" animateRerendering={false} className="flex flex-col gap-9">
         <div className="flex justify-between">
           <Tabs
             basePath={`/${demo.slug}`}

@@ -1,7 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
-import React from 'react';
+import React, { useRef } from 'react';
 
 export function Prose({
   children,
@@ -15,6 +15,14 @@ export function Prose({
   const isCollapsible = typeof collapsed === 'boolean';
   const [isCollapsed, setIsCollapsed] = React.useState(collapsed ?? false);
   const contentId = React.useId();
+
+  const toggleCollapse = () => {
+    const newState = !isCollapsed;
+    setIsCollapsed(newState);
+    if (newState) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className={clsx(className)}>
@@ -36,7 +44,7 @@ export function Prose({
 
       {isCollapsible && (
         <button
-          onClick={() => setIsCollapsed(!isCollapsed)}
+          onClick={toggleCollapse}
           aria-controls={contentId}
           aria-expanded={!isCollapsed}
           className="mt-4 rounded-sm bg-gray-800 px-1.5 py-1 text-xs leading-none font-semibold whitespace-nowrap text-gray-300 tabular-nums hover:bg-gray-500 hover:text-white"
