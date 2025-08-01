@@ -28,11 +28,10 @@ export default async function Layout({
 
   return (
     <>
-      <Boundary label="Demo" kind="solid" animateRerendering={false}>
+      <Boundary label="Courses at Arizona State University" kind="solid" animateRerendering={false}>
         <Mdx source={readme} collapsed={true} />
       </Boundary>
       <Boundary
-        label="Courses"
         kind="solid"
         animateRerendering={false}
         className="flex flex-col gap-9"
