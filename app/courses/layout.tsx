@@ -10,7 +10,7 @@ import { Mdx } from '#/ui/codehike';
 import readme from './readme.mdx';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const demo = db.demo.find({ where: { slug: 'courses' } });
+  const demo = await db.demo.find({ where: { slug: 'courses' } });
 
   return {
     title: demo.name,
@@ -23,8 +23,8 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const demo = db.demo.find({ where: { slug: 'courses' } });
-  const sections = db.section.findMany();
+  const demo = await db.demo.find({ where: { slug: 'courses' } });
+  const sections = await db.section.findMany();
 
   return (
     <>
@@ -32,7 +32,7 @@ export default async function Layout({
         <Mdx source={readme} collapsed={true} />
       </Boundary>
       <Boundary
-        label="layout.tsx"
+        label="Courses"
         kind="solid"
         animateRerendering={false}
         className="flex flex-col gap-9"
@@ -41,14 +41,10 @@ export default async function Layout({
           <Tabs
             basePath={`/${demo.slug}`}
             items={[
-              { text: 'Home' },
+              { text: 'All' },
               ...sections.map((x) => ({ text: x.name, slug: x.slug })),
             ]}
           />
-
-          <div className="self-start">
-            <ClickCounter />
-          </div>
         </div>
 
         {children}

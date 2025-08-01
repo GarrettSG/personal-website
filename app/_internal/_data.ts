@@ -1,29 +1,15 @@
-// This is a mock database used to simplify parts of the app not
-// relevant to the demo. In a real app, this data would live in
-// a relational database like PostgreSQL or MySQL, accessed through
-// a database client or ORM.
-
 export type Product = {
   id: string;
   courseName: string;
   courseId: string;
   grade: string;
-  category: string;
+  section: string; 
 };
 
 export type Section = {
   id: string;
   name: string;
   slug: string;
-  categories: string[];
-};
-
-export type Category = {
-  id: string;
-  name: string;
-  section: string;
-  slug: string;
-  products: string[];
 };
 
 export type Demo = {
@@ -36,46 +22,42 @@ export type Demo = {
 export type DemoCategory = { name: string; items: Demo[] };
 
 const sections: Section[] = [
-  { id: '1', name: 'Computer Science', slug: 'clothing', categories: ['1', '2', '3'] },
-  { id: '2', name: 'Data Science', slug: 'electronics', categories: ['4', '5', '6'] },
-  { id: '3', name: 'Math', slug: 'sports', categories: ['7', '8', '9'] },
-  { id: '4', name: 'Other', slug: 'other', categories: ['7', '8', '9'] },
-];
-
-const categories: Category[] = [
-  { id: '1', name: 'Tops', slug: 'tops', section: '1', products: ['1'] },
-  { id: '2', name: 'Shorts', slug: 'shorts', section: '1', products: ['2'] },
-  { id: '3', name: 'Shoes', slug: 'shoes', section: '1', products: ['3'] },
-  { id: '4', name: 'Phones', slug: 'phones', section: '2', products: ['4'] },
-  { id: '5', name: 'Laptops', slug: 'laptops', section: '2', products: ['5'] },
-  { id: '6', name: 'Tablets', slug: 'tablets', section: '2', products: ['6'] },
-  { id: '7', name: 'Balls', slug: 'balls', section: '3', products: ['7'] },
-  {
-    id: '8',
-    name: 'Equipment',
-    slug: 'equipment',
-    section: '3',
-    products: ['8'],
-  },
-  {
-    id: '9',
-    name: 'Accessories',
-    slug: 'accessories',
-    section: '3',
-    products: ['9'],
-  },
+  { id: '1', name: 'Computer Science', slug: 'computer-science'},
+  { id: '2', name: 'Data Science', slug: 'data-science'},
+  { id: '3', name: 'Math', slug: 'math'},
+  { id: '4', name: 'Other', slug: 'other'},
 ];
 
 const products: Product[] = [
-  { id: '1', courseName: 'Data Structures and Algorithms', courseId: 'CSE310', grade: 'A+', category: '1' },
-  { id: '2', courseName: 'Intro to Programming Languages', courseId: 'CSE240', grade: 'A', category: '2' },
-  { id: '3', courseName: 'Computer Org/Assembly Programming', courseId: 'CSE230', grade: 'A', category: '3' },
-  { id: '4', courseName: 'Phone', courseId: 'phone.png', grade: '', category: '4' },
-  { id: '5', courseName: 'Laptop', courseId: 'laptop.png', grade: '', category: '5' },
-  { id: '6', courseName: 'Tablet', courseId: 'tablet.png', grade: '', category: '6' },
-  { id: '7', courseName: 'Basketball', courseId: 'balls.png', grade: '', category: '7' },
-  { id: '8', courseName: 'Weights', courseId: 'weights.png', grade: '', category: '8' },
-  { id: '9', courseName: 'Gloves', courseId: 'gloves.png', grade: '', category: '9' },
+  { id: '01', courseName: 'Data Structures and Algorithms', courseId: 'CSE310', grade: 'A+', section: '1' },
+  { id: '02', courseName: 'Exploring Data in R and Python', courseId: 'DAT301', grade: 'A+', section: '2' },
+  { id: '03', courseName: 'Applied Linear Algebra', courseId: 'MAT343', grade: 'A+', section: '3' },
+  { id: '04', courseName: 'Into to Software Engineering', courseId: 'CSE360', grade: 'In Progress', section: '1' },
+  { id: '05', courseName: 'Computer Organization / Assembly Language Prog', courseId: 'CSE230', grade: 'A', section: '1' },
+  { id: '06', courseName: 'Operating Systems', courseId: 'CSE330', grade: 'In Progress', section: '1' },
+  { id: '07', courseName: 'Into to Theoretical Computer Science', courseId: 'CSE355', grade: 'In Progress', section: '1' },
+  { id: '08', courseName: 'Probability and Statistics for Engineers', courseId: 'IEE380', grade: 'A', section: '3' },
+  { id: '09', courseName: 'Discete Math', courseId: 'MAT243', grade: 'A+', section: '3' },
+  { id: '10', courseName: 'Math Tools for Data Science', courseId: 'DAT300', grade: 'In Progress', section: '2' },
+  { id: '11', courseName: 'Into to Programming Languages (C, C++, Scheme, Prolog)', courseId: 'CSE240', grade: 'A', section: '1' },
+  { id: '12', courseName: 'Calculus for Engineers III', courseId: 'MAT267', grade: 'A+', section: '3' },
+  { id: '13', courseName: 'Data Science and Society', courseId: 'DAT250', grade: 'In Progress', section: '2' },
+  { id: '14', courseName: 'Information Assurance', courseId: 'CSE365', grade: 'B+', section: '1' },
+  { id: '15', courseName: 'Computing Ethics', courseId: 'CSE301', grade: 'A+', section: '1' },
+  { id: '16', courseName: 'Entrepreneur & Value Creation', courseId: 'FSE301', grade: 'A', section: '4' },
+  { id: '17', courseName: 'Digital Design Fundamentals', courseId: 'EEE120', grade: 'A+', section: '1' },
+  { id: '18', courseName: 'Object-Oriented Programming and Data', courseId: 'CSE205', grade: 'A', section: '1' },
+  { id: '19', courseName: 'Programming Introduction to Engineering', courseId: 'CSE110', grade: 'A', section: '1' },
+  { id: '20', courseName: 'The Grrography of World Crises', courseId: 'GCU350', grade: 'A+', section: '4' },
+  { id: '21', courseName: 'Intro to Physical Geography', courseId: 'GPH111/112', grade: 'A+', section: '4' },
+  { id: '22', courseName: 'Latinas/os in the U.S.', courseId: 'TCL101', grade: 'A+', section: '4' },
+  { id: '23', courseName: 'Introduction to Engineering', courseId: 'FSE100', grade: 'A', section: '4' },
+  { id: '24', courseName: 'Intro to Geology I', courseId: 'GLG101/103', grade: 'A+', section: '4' },
+  { id: '25', courseName: 'Intro to Geology II', courseId: 'GLG102/104', grade: 'A+', section: '4' },
+  { id: '26', courseName: 'Into to Evolution and Medicine', courseId: 'ASB250', grade: 'A+', section: '4' },
+  { id: '27', courseName: 'Intoduction to Psychology', courseId: 'PSY101', grade: 'A+', section: '4' },
+  { id: '28', courseName: 'The ASU Experience', courseId: 'ASU101', grade: 'A+', section: '4' },
+  { id: '29', courseName: 'Intoduction to Asia', courseId: 'HST111', grade: 'A+', section: '4' },
 ];
 
 
@@ -139,4 +121,4 @@ const demos = [
 
 export type DemoSlug = (typeof demos)[number]['items'][number]['slug'];
 
-export const data = { sections, categories, products, demos };
+export const data = { sections, products, demos };

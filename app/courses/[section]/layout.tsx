@@ -19,19 +19,8 @@ export default async function Layout({
   }
 
   const demo = db.demo.find({ where: { slug: 'courses' } });
-  const categories = db.category.findMany({ where: { section: section?.id } });
 
   return (
-    <Boundary label="[section]/layout.tsx" className="flex flex-col gap-9">
-      <Tabs
-        basePath={`/${demo.slug}/${section.slug}`}
-        items={[
-          { text: 'All' },
-          ...categories.map((x) => ({ text: x.name, slug: x.slug })),
-        ]}
-      />
-
       <div>{children}</div>
-    </Boundary>
   );
 }
