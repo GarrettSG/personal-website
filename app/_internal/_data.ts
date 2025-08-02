@@ -48,7 +48,7 @@ const products: Courses[] = [
   { id: '17', courseName: 'Digital Design Fundamentals', courseId: 'EEE120', grade: 'A+', section: '1' },
   { id: '18', courseName: 'Object-Oriented Programming and Data', courseId: 'CSE205', grade: 'A', section: '1' },
   { id: '19', courseName: 'Programming Introduction to Engineering', courseId: 'CSE110', grade: 'A', section: '1' },
-  { id: '20', courseName: 'The Grrography of World Crises', courseId: 'GCU350', grade: 'A+', section: '4' },
+  { id: '20', courseName: 'The Geography of World Crises', courseId: 'GCU350', grade: 'A+', section: '4' },
   { id: '21', courseName: 'Intro to Physical Geography', courseId: 'GPH111/112', grade: 'A+', section: '4' },
   { id: '22', courseName: 'Latinas/os in the U.S.', courseId: 'TCL101', grade: 'A+', section: '4' },
   { id: '23', courseName: 'Introduction to Engineering', courseId: 'FSE100', grade: 'A', section: '4' },
