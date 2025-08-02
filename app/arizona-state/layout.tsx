@@ -7,7 +7,8 @@ import { ClickCounter } from '#/ui/click-counter';
 import { Tabs } from '#/ui/tabs';
 import { type Metadata } from 'next';
 import { Mdx } from '#/ui/codehike';
-import readme from './readme.mdx';
+import aboutASU from './aboutASU.mdx';
+import aboutMajor from './aboutMajor.mdx';
 
 export async function generateMetadata(): Promise<Metadata> {
   const demo = db.demo.find({ where: { slug: 'arizona-state' } });
@@ -29,15 +30,15 @@ export default async function Layout({
   return (
     <>
       <Boundary label="Demo" kind="solid" animateRerendering={false}>
-        <Mdx source={readme} collapsed={true} />
+        <img
+          src="images/ASU-Logo.png"
+          alt="ASU Fulton Engineering logo"
+          style={{ maxHeight: '100px', width: 'auto', padding: '15px' }}
+        />
+        <Mdx source={aboutASU} collapsed={true} />
       </Boundary>
-      <Boundary
-        label="layout.tsx"
-        kind="solid"
-        animateRerendering={false}
-        className="flex flex-col gap-9"
-      >
-        Text goes here
+      <Boundary label="layout.tsx" kind="solid" animateRerendering={false} className="flex flex-col gap-9">
+        <Mdx source={aboutMajor}/>
       </Boundary>
     </>
   );

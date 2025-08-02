@@ -14,6 +14,7 @@ export const Boundary = ({
   animateRerendering = true,
   corners,
   className,
+  noBackground = false,
 }: {
   children: React.ReactNode;
   label?: string | string[];
@@ -23,10 +24,11 @@ export const Boundary = ({
   animateRerendering?: boolean;
   corners?: boolean;
   className?: string;
+  noBackground?: boolean;
 }) => {
   return (
     <div
-      style={{ backgroundColor: 'rgba(0,0,0,0.3)' }}
+      style={!noBackground ? { backgroundColor: 'rgba(0,0,0,0.3)' } : undefined}
       className={clsx('relative border', {
         'border-dashed': kind === 'dashed',
         'border-gray-800': color === 'gray',

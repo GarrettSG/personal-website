@@ -8,7 +8,7 @@ export default async function Page() {
   const products = db.product.findMany();
 
   return (
-    <Boundary animateRerendering={false}>
+    <Boundary animateRerendering={false} noBackground>
       <div className="flex flex-col gap-4">
         <h1 className="text-xl font-semibold text-gray-300">
           All{' '}
