@@ -4,7 +4,7 @@ import {
   type Demo,
   type DemoCategory,
   type DemoSlug,
-  type Product,
+  type Courses,
   type Section,
 } from '../app/_internal/_data';
 
@@ -23,7 +23,7 @@ type DemoFindOptions = { where?: DemoWhere };
 const db = {
   product: {
     find: (options: ProductFindOptions) => {
-      let product: Product | undefined;
+      let product: Courses | undefined;
 
       if (options.where?.id !== undefined) {
         product = data.products.find((p) => p.id === options.where?.id);
@@ -127,4 +127,4 @@ const db = {
 
 export default db;
 
-export type { Demo, Product, Section, DemoCategory };
+export type { Demo, Courses as Product, Section, DemoCategory };

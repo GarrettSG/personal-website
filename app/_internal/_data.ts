@@ -1,4 +1,4 @@
-export type Product = {
+export type Courses = {
   id: string;
   courseName: string;
   courseId: string;
@@ -28,7 +28,7 @@ const sections: Section[] = [
   { id: '4', name: 'Other', slug: 'other'},
 ];
 
-const products: Product[] = [
+const products: Courses[] = [
   { id: '01', courseName: 'Data Structures and Algorithms', courseId: 'CSE310', grade: 'A+', section: '1' },
   { id: '02', courseName: 'Exploring Data in R and Python', courseId: 'DAT301', grade: 'A+', section: '2' },
   { id: '03', courseName: 'Applied Linear Algebra', courseId: 'MAT343', grade: 'A+', section: '3' },

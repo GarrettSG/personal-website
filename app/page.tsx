@@ -11,9 +11,9 @@ export default function Page() {
       label="About Me"
       animateRerendering={false}
       kind="solid"
-      className="flex flex-col gap-9"
+      className="relative flex flex-col gap-9 z-0" // make boundary stacking context lower
     >
-      <GlowingCard></GlowingCard>
+      <GlowingCard />
       {demos.map((section) => {
         return (
           <div key={section.name} className="flex flex-col gap-3">
