@@ -28,7 +28,8 @@ export default async function Layout({
   return (
     <>
       <Boundary label="Courses at Arizona State University" kind="solid" animateRerendering={false}>
-        <div>GPA: 4.00</div>
+        <div className='p-0.75'>Cumulative GPA: 4.00</div>
+        <div className='p-0.75'>Major GPA: 4.00</div>
       </Boundary>
       <Boundary kind="solid" animateRerendering={false} className="flex flex-col gap-9">
         <div className="flex justify-between">

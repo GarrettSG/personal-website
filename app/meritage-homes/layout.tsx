@@ -33,7 +33,7 @@ export default async function Layout({
         <img
           src="images/MeritageHomes.png"
           alt="ASU Fulton Engineering logo"
-          style={{ maxHeight: '150px', width: 'auto', padding: '5px' }}
+          style={{ maxHeight: '150px', width: 'auto', padding: '12px' }}
         />
         <Mdx source={aboutMeritage} collapsed={true} />
       </Boundary>

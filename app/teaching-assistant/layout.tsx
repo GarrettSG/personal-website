@@ -7,7 +7,8 @@ import { ClickCounter } from '#/ui/click-counter';
 import { Tabs } from '#/ui/tabs';
 import { type Metadata } from 'next';
 import { Mdx } from '#/ui/codehike';
-import readme from './aboutTA.mdx';
+import fultonMarkdown from './aboutFulton.mdx';
+import taMarkdown from './aboutTA.mdx';
 
 export async function generateMetadata(): Promise<Metadata> {
   const demo = db.demo.find({ where: { slug: 'teaching-assistant' } });
@@ -28,21 +29,21 @@ export default async function Layout({
 
   return (
     <>
-      <Boundary label="Demo" kind="solid" animateRerendering={false}>
+      <Boundary label="About Fulton" kind="solid" animateRerendering={false}>
         <img
           src="images/asu_fultonengineering.png"
           alt="ASU Fulton Engineering logo"
           style={{ maxHeight: '150px', width: 'auto', padding: '5px' }}
         />
-        <Mdx source={readme} collapsed={true} />
+        <Mdx source={fultonMarkdown} collapsed={true} />
       </Boundary>
       <Boundary
-        label="layout.tsx"
+        label="Position"
         kind="solid"
         animateRerendering={false}
         className="flex flex-col gap-9"
       >
-        TA text here
+        <Mdx source={taMarkdown}/>
       </Boundary>
     </>
   );
