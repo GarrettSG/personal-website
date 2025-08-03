@@ -29,7 +29,7 @@ export default async function Layout({
 
   return (
     <>
-      <Boundary label="Demo" kind="solid" animateRerendering={false}>
+      <Boundary label="ASU" kind="solid" animateRerendering={false}>
         <img
           src="images/ASU-Logo.png"
           alt="ASU Fulton Engineering logo"
@@ -37,7 +37,7 @@ export default async function Layout({
         />
         <Mdx source={aboutASU} collapsed={true} />
       </Boundary>
-      <Boundary label="layout.tsx" kind="solid" animateRerendering={false} className="flex flex-col gap-9">
+      <Boundary label="My Education" kind="solid" animateRerendering={false} className="flex flex-col gap-9">
         <Mdx source={aboutMajor}/>
       </Boundary>
     </>

@@ -29,7 +29,7 @@ export default async function Layout({
 
   return (
     <>
-      <Boundary label="Demo" kind="solid" animateRerendering={false}>
+      <Boundary label="About Theta Tau" kind="solid" animateRerendering={false}>
         <img
           src="images/theta-tau.png"
           alt="Theta Tau Logo"
@@ -50,7 +50,7 @@ export default async function Layout({
         <Mdx source={aboutThetaTau} collapsed={true} />
       </Boundary>
       <Boundary
-        label="layout.tsx"
+        label="Website Development"
         kind="solid"
         animateRerendering={false}
         className="flex flex-col gap-9"
