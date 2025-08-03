@@ -2,7 +2,7 @@
 
 import { type Demo, type DemoCategory } from '#/lib/db';
 import { LinkStatus } from '#/ui/link-status';
-import { NextLogoDark } from '#/ui/logo-next';
+import { GarrettLogo } from '#/ui/logo-next';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
@@ -22,7 +22,7 @@ export function GlobalNav({ items }: { items: DemoCategory[] }) {
           onClick={close}
         >
           <div className="size-9 rounded-full border-2 border-gray-800 group-hover:border-gray-700">
-            <NextLogoDark />
+            <GarrettLogo />
           </div>
 
           <h3 className="text-lg font-medium text-gray-200 group-hover:text-white">

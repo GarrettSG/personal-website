@@ -7,7 +7,8 @@ import { ClickCounter } from '#/ui/click-counter';
 import { Tabs } from '#/ui/tabs';
 import { type Metadata } from 'next';
 import { Mdx } from '#/ui/codehike';
-import readme from './readme.mdx';
+import aboutThetaTau from './aboutThetaTau.mdx';
+import aboutFratDev from './aboutFratWeb.mdx';
 
 export async function generateMetadata(): Promise<Metadata> {
   const demo = db.demo.find({ where: { slug: 'theta-tau' } });
@@ -29,7 +30,24 @@ export default async function Layout({
   return (
     <>
       <Boundary label="Demo" kind="solid" animateRerendering={false}>
-        <Mdx source={readme} collapsed={true} />
+        <img
+          src="images/theta-tau.png"
+          alt="Theta Tau Logo"
+          style={{ maxHeight: '200px', width: 'auto', padding: '5px' }}
+        />
+        <div className='p-3'>
+          <a>Theta Tau - Delta Gamma Website → </a>
+          <a 
+            href="https://thetatau-dg.org/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-blue-500 underline font-medium hover:text-blue-600 transition-colors"
+          >
+            thetatau-dg.org
+          </a>
+        </div>
+
+        <Mdx source={aboutThetaTau} collapsed={true} />
       </Boundary>
       <Boundary
         label="layout.tsx"
@@ -37,7 +55,7 @@ export default async function Layout({
         animateRerendering={false}
         className="flex flex-col gap-9"
       >
-        Theta Tau Text Here
+        <Mdx source={aboutFratDev}/>
       </Boundary>
     </>
   );
