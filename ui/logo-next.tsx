@@ -2,8 +2,8 @@ export function GarrettLogo() {
   return (
     <img
       src="images/garrett-logo.png"
-      alt="Next.js Logo Light"
-      width='70px'
+      alt="Garrett Logo"
+      width='35px'
       style={{ borderRadius: '50%' }}
     />
   );
