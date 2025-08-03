@@ -98,7 +98,7 @@ const demos = [
       {
         slug: 'arizona-state',
         name: 'Arizona State University',
-        description: 'Bachelor\'s of Science in Computer Science with a minor in Data Science',
+        description: 'Bachelor\'s of Science in Computer Science & Data Science',
       },
       {
         slug: 'courses',

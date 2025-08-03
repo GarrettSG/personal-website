@@ -3,8 +3,6 @@
 import React from 'react';
 import db from '#/lib/db';
 import { Boundary } from '#/ui/boundary';
-import { ClickCounter } from '#/ui/click-counter';
-import { Tabs } from '#/ui/tabs';
 import { type Metadata } from 'next';
 import { Mdx } from '#/ui/codehike';
 import aboutMeritage from './aboutMeritage.mdx';
@@ -24,8 +22,6 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const demo = db.demo.find({ where: { slug: 'meritage-homes' } });
-  const sections = db.section.findMany();
 
   return (
     <>
@@ -37,11 +33,8 @@ export default async function Layout({
         />
         <Mdx source={aboutMeritage} collapsed={true} />
       </Boundary>
-      <Boundary
-        label="Position" kind="solid" animateRerendering={false} className="flex flex-col gap-9"
-      >
+      <Boundary label="Position" kind="solid" animateRerendering={false} className="flex flex-col gap-9">
         <Mdx source={aboutPosition} />
-
       </Boundary>
     </>
   );
