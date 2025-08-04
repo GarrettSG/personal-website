@@ -3,8 +3,12 @@ export function GarrettLogo() {
     <img
       src="images/garrett-logo.png"
       alt="Garrett Logo"
-      width='35px'
-      style={{ borderRadius: '50%' }}
+      style={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        borderRadius: '50%',
+      }}
     />
   );
 }
