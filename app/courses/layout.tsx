@@ -5,8 +5,6 @@ import db from '#/lib/db';
 import { Boundary } from '#/ui/boundary';
 import { Tabs } from '#/ui/tabs';
 import { type Metadata } from 'next';
-import { Mdx } from '#/ui/codehike';
-import readme from './readme.mdx';
 
 export async function generateMetadata(): Promise<Metadata> {
   const demo = await db.demo.find({ where: { slug: 'courses' } });
