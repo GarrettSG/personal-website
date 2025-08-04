@@ -1,6 +1,5 @@
 import { Product } from '#/lib/db';
 import clsx from 'clsx';
-import Image from 'next/image';
 
 import {
   ElementType,
