@@ -63,21 +63,6 @@ const products: Courses[] = [
 
 const demos = [
   {
-    name: 'Personal Projects',
-    items: [
-      {
-        slug: 'project-cars',
-        name: 'Deep Learning Cars',
-        description: 'Unity project using evolutionary neural networks to train cars to drive',
-      },
-      {
-        slug: 'project-sportbet',
-        name: 'OddsOptimizer',
-        description: 'Python application that gets real-time betting odds and identifies the most favorable line',
-      }
-    ],
-  },
-  {
     name: 'Work Experience',
     items: [
       {
