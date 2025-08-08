@@ -21,11 +21,11 @@ export function GlobalNav({ items }: { items: DemoCategory[] }) {
           className="group flex w-full items-center gap-x-2.5"
           onClick={close}
         >
-          <div className="size-12 rounded-full border-2 border-gray-800 group-hover:border-gray-700">
+          <div className="size-14 rounded-full border-2 border-gray-800 group-hover:border-gray-700">
             <GarrettLogo />
           </div>
 
-          <h3 className="text-lg font-medium text-gray-200 group-hover:text-white">
+          <h3 className="text-lg font-bold text-gray-200 group-hover:text-white">
             Garrett Gibson
           </h3>
         </Link>
