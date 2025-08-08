@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: 'Portfolio site for Garrett Gibson – full-stack developer, software engineer, and technology enthusiast.',
   openGraph: {
     title: 'Garrett Gibson',
-    description: 'Explore the personal site and projects of Garrett Gibson, a full-stack developer focused on creating impactful software.',
+    description: 'Explore the personal site and projects of Garrett Gibson, a full-stack developer and computer science student.',
     url: 'https://garrettgibson.dev',
     siteName: 'Garrett Gibson',
     type: 'website',
