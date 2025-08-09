@@ -5,6 +5,7 @@ import Byline from '#/ui/byline';
 import { GlobalNav } from '#/ui/global-nav';
 import { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body
         className={`overflow-y-scroll bg-gray-950 font-sans ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Analytics />
         <div
           className="min-h-screen overflow-y-scroll font-sans antialiased"
           style={{
