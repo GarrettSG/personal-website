@@ -1,0 +1,58 @@
+# OddsOptimizerAPI
+
+## Overview
+
+I am building a **sports betting API** that allows users to retrieve and compare betting lines from multiple sportsbooks. The long-term goal of this project is to create a fully-featured API where users can query for sports betting lines across different sportsbooks and easily identify the most favorable odds for a given game.
+
+This project demonstrates practical web scraping, API design with FastAPI, and working with modern Python tools for real-time data collection.
+
+---
+
+![Betting Lines JSON](images/sportBetJson.png)
+
+## Current Version: [OddsOptimizerAPI](https://github.com/GarrettSG/OddsOptimizerApi)
+
+**OddsOptimizerAPI** is the latest iteration of this project. It is built with **FastAPI** and **Playwright**, and it can:
+
+- Scrape betting lines from sportsbooks such as **DraftKings** and **BetMGM**.
+- Return the data as a **JSON-formatted response**, suitable for integration with other applications or web services.
+- Run asynchronously, handling multiple requests efficiently.
+
+The API is structured following **Controller and Service best practices**, making it modular and easy to extend for additional sportsbooks or sports leagues.
+
+### Features
+
+- **League Support:** NFL, MLB, NBA, NCAAF
+- **Scraping Libraries:** Playwright for browser automation, BeautifulSoup for HTML parsing
+- **Safe Data Parsing:** Converts spreads, spread lines, and moneylines safely to Python numeric types
+- **Ready for Integration:** JSON responses allow easy use in dashboards, apps, or data pipelines
+- **GitHub Repository:** [OddsOptimizerAPI](https://github.com/GarrettSG/OddsOptimizerApi)
+
+---
+
+## Next Steps
+
+- **Deploy API as an Azure Function App:** Making the API accessible as a cloud-hosted service.
+- **Utilize Azure API Management Features:** To enable secure, interactive access to the API directly on my personal website.
+- **Create an Interactive Website Feature:** Allow users to query and compare betting lines in real-time through a web interface.
+
+---
+
+## Beta Implementation: [OddsOptimizer](https://github.com/GarrettSG/OddsOptimizer)
+
+![Lines](images/oddsProofOfConcept.png)
+
+The **OddsOptimizer** project is an **early-stage proof-of-concept** that helped me explore web scraping for sports betting. Key aspects include:
+
+- **Terminal-based Application:** Runs locally and prints results to the terminal.
+- **Sportsbooks Compared:** DraftKings, BetMGM, Bally Bets
+- **Functionality:** Displays the **most favorable line** among multiple sportsbooks for a given game.
+
+This project helped validate my scraping techniques and informed the design of the more robust API in **OddsOptimizerAPI**.
+
+---
+
+## Links
+
+- **Latest API:** [OddsOptimizerAPI GitHub Repo](https://github.com/GarrettSG/OddsOptimizerApi)  
+- **Experimental Version:** [OddsOptimizer GitHub Repo](https://github.com/GarrettSG/OddsOptimizer)

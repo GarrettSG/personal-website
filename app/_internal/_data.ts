@@ -63,6 +63,21 @@ const products: Courses[] = [
 
 const demos = [
   {
+    name: 'Personal Projects',
+    items: [
+      {
+        slug: 'odds-optimizer',
+        name: 'OddsOptimizer API',
+        description: 'Real-time sports betting API that compares odds across multiple sportsbooks',
+      },
+      {
+        slug: 'personal-website',
+        name: 'Personal Website',
+        description: 'My personal portfolio website showcasing projects, coursework, and custom UI components',
+      }
+    ]
+  },
+  {
     name: 'Work Experience',
     items: [
       {
