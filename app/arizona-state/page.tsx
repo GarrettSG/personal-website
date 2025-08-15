@@ -1,27 +1,24 @@
 'use cache';
 
-import db from '#/lib/db';
 import { Boundary } from '#/ui/boundary';
-import { ProductCard } from '#/ui/product-card';
+import { Mdx } from '#/ui/codehike';
+import aboutASU from './aboutASU.mdx';
+import aboutMajor from './aboutMajor.mdx';
 
 export default async function Page() {
-  const products = db.product.findMany({ limit: 9 });
-
   return (
-    <Boundary label="page.tsx">
-      <div className="flex flex-col gap-4">
-        <h1 className="text-xl font-semibold text-gray-300">
-          All{' '}
-          <span className="font-mono tracking-tighter text-gray-600">
-            ({products.length})
-          </span>
-        </h1>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </div>
-    </Boundary>
+    <div>
+      <Boundary label="ASU" kind="solid" animateRerendering={false}>
+        <img
+          src="images/ASU-Logo.png"
+          alt="ASU Fulton Engineering logo"
+          style={{ maxHeight: '100px', width: 'auto', padding: '15px' }}
+        />
+        <Mdx source={aboutASU} collapsed={true} />
+      </Boundary>
+      <Boundary label="My Education" kind="solid" animateRerendering={false} className="flex flex-col gap-9">
+        <Mdx source={aboutMajor}/>
+      </Boundary>
+    </div>
   );
 }
