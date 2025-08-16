@@ -2,8 +2,6 @@
 
 import { notFound } from 'next/navigation';
 import db from '#/lib/db';
-import { Boundary } from '#/ui/boundary';
-import { Tabs } from '#/ui/tabs';
 
 export default async function Layout({
   params,
