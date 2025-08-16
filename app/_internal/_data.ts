@@ -71,6 +71,11 @@ const demos = [
         description: 'Real-time sports betting API that compares odds across multiple sportsbooks',
       },
       {
+        slug: 'learning-cars',
+        name: 'NeuroTrack',
+        description: 'A Unity app where neural networks learn to control cars using sensors, speed, and generations of training.',
+      },
+      {
         slug: 'personal-website',
         name: 'Personal Website',
         description: 'My personal portfolio website showcasing projects, coursework, and custom UI components',

@@ -1,0 +1,76 @@
+# NeuroTrack
+
+## Overview
+
+**NeuroTrack** is a Unity-based project where cars learn to drive using **evolutionary neural networks** and 
+reinforcement-inspired feedback. Built with **C# in Unity**, the project explores how AI can adapt driving strategies 
+through generations of trial and error.
+
+The long-term goal is to evolve AI agents that can navigate complex tracks with minimal human intervention, much like 
+how real-world self-driving cars refine their control systems through data and simulation.
+
+---
+
+![Game Development](images/neuroTrack.png)
+
+## Current Version
+
+**NeuroTrack** currently supports:
+
+- A **realistic top-down driving model** with traction, drift, and angular velocity.  
+- Custom Unity **assets** for cars and tracks, making testing environments modular and scalable.  
+- A defined **neural network input/output pipeline**, preparing cars to be controlled by AI.  
+- Early **evolutionary framework**, with genes and mutation mechanics under development.  
+
+---
+
+### Features
+
+- **Neural Network Inputs:**
+  - Sensor Distances ∈ [0, 1] (5 sensors, where 0 = obstacle very close, 1 = no obstacle within range)
+  - Forward Velocity ∈ [−1, 1] (normalized by expected maximum speed; −1 = full reverse, +1 = full forward)
+  - Lateral Velocity ∈ [−1, 1] (normalized sideways slip; −1 = max left drift, +1 = max right drift)
+
+- **Network Outputs:**
+  - Steer ∈ [−1, 1] (−1 = full left steer, +1 = full right steer)
+  - Throttle ∈ [−1, 1] (−1 = full reverse, 0 = coasting, +1 = full forward)
+
+- **Evolutionary Design:** Neural network weights are encoded as “genes” that mutate across generations, 
+enabling the population to gradually improve driving ability.  
+
+- **Reinforcement-Inspired Feedback:** Cars are rewarded for progress, speed, and survival while being penalized 
+for collisions.  
+
+---
+
+## Next Steps
+
+- **Neural Network Implementation:**  
+  Building and testing the feedforward multilayer perceptron (MLP) to process sensor and velocity inputs.
+
+- **Genetic Algorithm Integration:**  
+  Evolving network weights across generations to improve driving strategies.
+
+- **Track Generalization:**  
+  Training cars to adapt to new tracks rather than overfitting to a single course.
+
+- **Visualization Tools:**  
+  Adding real-time fitness metrics, genome visualization, and replay analysis.
+
+---
+
+## Project Inspiration
+
+This project is inspired by [A.I. Learns to Drive From Scratch in Trackmania](https://www.youtube.com/watch?v=SX08NT55YhA), 
+where Yosh trained an AI model to drive in *Trackmania*. He demonstrated how **neural networks can learn 
+driving techniques such as cornering and acceleration timing through iterative training.  
+
+**NeuroTrack** applies a similar concept in Unity, but with a **top-down driving model** that balances physics realism 
+with accessible experimentation. The aim is to explore how cars can evolve intelligent driving strategies using nothing 
+but simulated sensors and feedback.
+
+---
+
+## Links
+
+- **Inspiration:** [Yosh’s Trackmania AI Video](https://www.youtube.com/watch?v=SX08NT55YhA)

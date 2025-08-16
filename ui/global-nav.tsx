@@ -2,7 +2,7 @@
 
 import { type Demo, type DemoCategory } from '#/lib/db';
 import { LinkStatus } from '#/ui/link-status';
-import { GarrettLogo } from '#/ui/logo-next';
+import { GarrettLogo } from '#/ui/garrett-logo';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import Link from 'next/link';
