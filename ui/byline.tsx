@@ -65,9 +65,8 @@ export default function Byline() {
         <span className="text-gray-800">/</span>
         <a
           className="transition-colors hover:text-gray-200"
-          href="https://www.linkedin.com/in/garrett-s-gibson"
-          target="_blank"
-          rel="noreferrer"
+          href="/GibsonResume.pdf"
+          download="Garrett_Gibson_Resume.pdf"
         >
           <div className="flex items-center space-x-2">
             <svg
