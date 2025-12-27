@@ -65,7 +65,7 @@ export default function Byline() {
         <span className="text-gray-800">/</span>
         <a
           className="transition-colors hover:text-gray-200"
-          href="/GibsonResume.pdf"
+          href="/downloads/GarrettGibsonResume.pdf"
           download="Garrett_Gibson_Resume.pdf"
         >
           <div className="flex items-center space-x-2">
