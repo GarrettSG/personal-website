@@ -1,28 +1,29 @@
-import type { NextConfig } from 'next';
-import createMDX from '@next/mdx';
-import { type CodeHikeConfig } from 'codehike/mdx';
+import type { NextConfig } from 'next'
+import createMDX from '@next/mdx'
+import { type CodeHikeConfig } from 'codehike/mdx'
 
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+
+  // Enables 'use cache'
+  cacheComponents: true,
+
   experimental: {
     inlineCss: true,
-    dynamicIO: true,
-    clientSegmentCache: true,
     viewTransition: true,
     prerenderEarlyExit: false,
-    routerBFCache: true,
   },
-} satisfies NextConfig;
+} satisfies NextConfig
 
 const codeHikeConfig = {
   components: { code: 'MyCode', inlineCode: 'MyInlineCode' },
-} satisfies CodeHikeConfig;
+} satisfies CodeHikeConfig
 
 const withMDX = createMDX({
   options: {
     remarkPlugins: [['remark-codehike', codeHikeConfig]],
     recmaPlugins: [['recma-codehike', codeHikeConfig]],
   },
-});
+})
 
-export default withMDX(nextConfig);
+export default withMDX(nextConfig)
